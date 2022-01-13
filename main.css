@@ -17,3 +17,74 @@ body {
 .bg-black {
     background-color: black;
 }
+
+/*====Slider====*/
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-image-1 {
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)),
+    url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F0d%2Fa4%2F52%2F0da45229f154dbbc623f0283a60fa518.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)),
+    url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F45%2Fe7%2Fe2%2F45e7e2ca7aabd4f2de1629d047954a6e.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)),
+    url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F20%2Fdd%2F32%2F20dd32841bc3bf16f765e4edbcc01ca7.jpg&f=1&nofb=1');
+    background-size: cover;
+}
+
+.title-color {
+    color:#fff;
+}
+
+.btn-color {
+    background: #000;
+    color: grey;
+}
+
+.btn-color:hover {
+    color: white;
+}
+
+@keyframes slide-btn{
+    16%{
+        transform: translateY(8px);
+    }
+    33%{
+        transform: translateY(-6px);
+    }
+    50%{
+        transform: translateY(4px);
+    }
+    65%{
+        transform: translateY(-2px);
+    }
+    85%{
+        transform: translateY(1px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.slide-btn{
+    display:inline-block;
+    vertical-align: middle;
+    transform:perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.slide-btn:hover,
+.slide-btn:focus,
+.slide-btn:active{
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
